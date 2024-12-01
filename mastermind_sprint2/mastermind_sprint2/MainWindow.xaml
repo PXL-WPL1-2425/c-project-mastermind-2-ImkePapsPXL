@@ -7,7 +7,7 @@
         <Label Name="label2" Width="50" Height="50" Background="LightGray" BorderThickness="2" BorderBrush="Black" Margin="70,10,0,0" HorizontalAlignment="Left" VerticalAlignment="Top" MouseDown="Label_MouseDown"/>
         <Label Name="label3" Width="50" Height="50" Background="LightGray" BorderThickness="2" BorderBrush="Black" Margin="130,10,0,0" HorizontalAlignment="Left" VerticalAlignment="Top" MouseDown="Label_MouseDown"/>
         <Label Name="label4" Width="50" Height="50" Background="LightGray" BorderThickness="2" BorderBrush="Black" Margin="190,10,0,0" HorizontalAlignment="Left" VerticalAlignment="Top" MouseDown="Label_MouseDown"/>
-        <!--<Label Name="scoreLabel" Content="Score: 100" FontSize="16" FontWeight="Bold" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="400,14,0,0"/>-->
+        <Label Name="scoreLabel" Content="Score: 100" FontSize="16" FontWeight="Bold" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="400,14,0,0"/>
         <Label Name="debugLabel" Content=" "  HorizontalAlignment="Left" VerticalAlignment="Top" Margin="339,150,0,0" Width="316" Height="85"/>
          <Label Name="timerLabel" Content=" " FontSize="16" FontWeight="Bold" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="290,69,0,0" Width="44"/>
         <Button Name="checkButton" Content="Check code" Width="100" Height="30" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="262,15,0,0" Click="CheckButton_Click"/>

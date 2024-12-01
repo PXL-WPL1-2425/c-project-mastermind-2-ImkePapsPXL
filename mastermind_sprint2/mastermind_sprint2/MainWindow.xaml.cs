@@ -93,27 +93,27 @@ namespace WpfApp
                 if (labels[i].Background == targetColors[i])
                 {
                     correctPositions++;
-                    //totalPenalty += 0;
+                    totalPenalty += 0;
                 }
                 else if (targetColors.Contains(labels[i].Background))
                 {
                     correctColors++;
                     match = false;
-                    //totalPenalty ++;
+                    totalPenalty ++;
                 }
                 else
                 {
                     match = false;
-                    //totalPenalty = +2;
+                    totalPenalty = +2;
                 }
             }
-            //score -= totalPenalty;
+            score -= totalPenalty;
             AddAttemptToList(correctPositions, correctColors);
 
             if (!match)
             {
                 remainingAttempts--;
-                //scoreLabel.Content = $"Score: {score}";
+                scoreLabel.Content = $"Score: {score}";
             }
             else if (match)
             {
