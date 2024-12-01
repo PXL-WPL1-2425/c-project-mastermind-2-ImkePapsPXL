@@ -142,7 +142,6 @@ namespace WpfApp
                 }
                 return;
             }
-
         }
         private void AddAttemptToList(int correctPositions, int correctColors)
         {
