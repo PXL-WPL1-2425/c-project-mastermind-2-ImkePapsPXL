@@ -108,7 +108,7 @@ namespace WpfApp
                 }
             }
             //score -= totalPenalty;
-            //AddAttemptToList(correctPositions, correctColors);
+            AddAttemptToList(correctPositions, correctColors);
 
             if (!match)
             {
@@ -144,56 +144,56 @@ namespace WpfApp
             }
 
         }
-        //private void AddAttemptToList(int correctPositions, int correctColors)
-        //{
-        //    //controle gedaan in gekleurde vakjes achter historiek
-        //    StackPanel attemptPanel = new StackPanel
-        //    {
-        //        Orientation = Orientation.Horizontal,
-        //        Margin = new Thickness(5)
-        //    };
+        private void AddAttemptToList(int correctPositions, int correctColors)
+        {
+            //controle gedaan in gekleurde vakjes achter historiek
+            StackPanel attemptPanel = new StackPanel
+            {
+                Orientation = Orientation.Horizontal,
+                Margin = new Thickness(5)
+            };
 
-        //    foreach (var label in labels)
-        //    {
-        //        WpfLabel colorLabel = new WpfLabel
-        //        {
-        //            Width = 30,
-        //            Height = 30,
-        //            Background = label.Background,
-        //            BorderThickness = new Thickness(1),
-        //            BorderBrush = Brushes.Black,
-        //            Margin = new Thickness(2)
-        //        };
-        //        attemptPanel.Children.Add(colorLabel);
-        //    }
-        //    for (int i = 0; i < correctPositions; i++)
-        //    {
-        //        WpfLabel feedbackLabel = new WpfLabel
-        //        {
-        //            Width = 20,
-        //            Height = 20,
-        //            Background = Brushes.Red,
-        //            Margin = new Thickness(2),
-        //            BorderBrush = Brushes.Black,
-        //            BorderThickness = new Thickness(2)
-        //        };
-        //        attemptPanel.Children.Add(feedbackLabel);
-        //    }
-        //    for (int i = 0; i < correctColors; i++)
-        //    {
-        //        WpfLabel feedbackLabel = new WpfLabel
-        //        {
-        //            Width = 20,
-        //            Height = 20,
-        //            Background = Brushes.White,
-        //            Margin = new Thickness(2),
-        //            BorderBrush = Brushes.Black,
-        //            BorderThickness = new Thickness(2)
-        //        };
-        //        attemptPanel.Children.Add(feedbackLabel);
-        //    }
-        //    attemptsPanel.Children.Add(attemptPanel);
-        //}        
+            foreach (var label in labels)
+            {
+                WpfLabel colorLabel = new WpfLabel
+                {
+                    Width = 30,
+                    Height = 30,
+                    Background = label.Background,
+                    BorderThickness = new Thickness(1),
+                    BorderBrush = Brushes.Black,
+                    Margin = new Thickness(2)
+                };
+                attemptPanel.Children.Add(colorLabel);
+            }
+            for (int i = 0; i < correctPositions; i++)
+            {
+                WpfLabel feedbackLabel = new WpfLabel
+                {
+                    Width = 20,
+                    Height = 20,
+                    Background = Brushes.Red,
+                    Margin = new Thickness(2),
+                    BorderBrush = Brushes.Black,
+                    BorderThickness = new Thickness(2)
+                };
+                attemptPanel.Children.Add(feedbackLabel);
+            }
+            for (int i = 0; i < correctColors; i++)
+            {
+                WpfLabel feedbackLabel = new WpfLabel
+                {
+                    Width = 20,
+                    Height = 20,
+                    Background = Brushes.White,
+                    Margin = new Thickness(2),
+                    BorderBrush = Brushes.Black,
+                    BorderThickness = new Thickness(2)
+                };
+                attemptPanel.Children.Add(feedbackLabel);
+            }
+            attemptsPanel.Children.Add(attemptPanel);
+        }
         private void StartCountDown()
         {
             ///<para>Hier definieer ik dat de counter op 0 moet beginnen
