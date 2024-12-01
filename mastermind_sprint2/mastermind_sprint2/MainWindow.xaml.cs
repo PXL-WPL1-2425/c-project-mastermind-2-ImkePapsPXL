@@ -117,30 +117,30 @@ namespace WpfApp
             }
             else if (match)
             {
-                //MessageBoxResult answer = MessageBox.Show($"Code is gekraakt in{attempts.ToString()} pogingen. Wil je nog eens?", $"WINNER", MessageBoxButton.YesNo, MessageBoxImage.Information);
-                //if (answer == MessageBoxResult.Yes)
-                //{
-                //    //ResetGame();
-                //}
-                //else
-                //{
-                //    Close();
-                //}
-                //return;
+                MessageBoxResult answer = MessageBox.Show($"Code is gekraakt in{attempts.ToString()} pogingen. Wil je nog eens?", $"WINNER", MessageBoxButton.YesNo, MessageBoxImage.Information);
+                if (answer == MessageBoxResult.Yes)
+                {
+                    ResetGame();
+                }
+                else
+                {
+                    Close();
+                }
+                return;
             }
             if (remainingAttempts <= 0)
             {
                 timer.Stop();
-                //MessageBoxResult answer = MessageBox.Show($"Geen pogingen meer. De code was {colorCode}. Wil je nog eens?", $"FAILED", MessageBoxButton.YesNo, MessageBoxImage.Information);
-                //if (answer == MessageBoxResult.Yes)
-                //{
-                //    ResetGame();
-                //}
-                //else
-                //{
-                //    Close();
-                //}
-                //return;
+                MessageBoxResult answer = MessageBox.Show($"Geen pogingen meer. De code was {colorCode}. Wil je nog eens?", $"FAILED", MessageBoxButton.YesNo, MessageBoxImage.Information);
+                if (answer == MessageBoxResult.Yes)
+                {
+                    ResetGame();
+                }
+                else
+                {
+                    Close();
+                }
+                return;
             }
 
         }
@@ -225,16 +225,16 @@ namespace WpfApp
                 if (attempts >= 10)
                 {
                     timer.Stop();
-                    //MessageBoxResult answer = MessageBox.Show($" Geen pogingen meer. De code was  {colorCode}. Nog eens proberen?", "FAILED", MessageBoxButton.YesNo, MessageBoxImage.Information);
-                    //if (answer == MessageBoxResult.Yes)
-                    //{
-                    //    ResetGame();
-                    //}
-                    //else
-                    //{
-                    //    Close();
-                    //}
-                    //return;
+                    MessageBoxResult answer = MessageBox.Show($" Geen pogingen meer. De code was  {colorCode}. Nog eens proberen?", "FAILED", MessageBoxButton.YesNo, MessageBoxImage.Information);
+                    if (answer == MessageBoxResult.Yes)
+                    {
+                        ResetGame();
+                    }
+                    else
+                    {
+                        Close();
+                    }
+                    return;
                 }
             }
         }
@@ -261,33 +261,33 @@ namespace WpfApp
             debugLabel.Content = $" {string.Join(", ", targetColors.Select(color => colorName[color]))}";
             #endif
         }
-        //private void ResetGame()
-        //{
-        //    score = 100;
-        //    attempts = 0;
-        //    remainingAttempts = 10;
-
-        //    attemptsPanel.Children.Clear();
-
-        //    GenerateTargetColors();
-
-        //    //scoreLabel.Content = "Score: 100";
-        //    this.Title = $"Poging {attempts}";
-
-        //    label1.Background = Brushes.White;
-        //    label2.Background = Brushes.White;
-        //    label3.Background = Brushes.White;
-        //    label4.Background = Brushes.White;
-        //}
-        private void MainWindow_Closing(object sender, System.ComponentModel.CancelEventArgs e)
+        private void ResetGame()
         {
-            MessageBoxResult answer = MessageBox.Show($"Wilt u het spel vroegtijdig beëindigen?", $"Poging {attempts}/10", MessageBoxButton.YesNo, MessageBoxImage.Warning);
+            score = 100;
+            attempts = 0;
+            remainingAttempts = 10;
 
-            if (answer == MessageBoxResult.No)
-            {
-                e.Cancel = true;
-            }
+            attemptsPanel.Children.Clear();
+
+            GenerateTargetColors();
+
+            //scoreLabel.Content = "Score: 100";
+            this.Title = $"Poging {attempts}";
+
+            label1.Background = Brushes.White;
+            label2.Background = Brushes.White;
+            label3.Background = Brushes.White;
+            label4.Background = Brushes.White;
         }
+        //private void MainWindow_Closing(object sender, System.ComponentModel.CancelEventArgs e)
+        //{
+        //    MessageBoxResult answer = MessageBox.Show($"Wilt u het spel vroegtijdig beëindigen?", $"Poging {attempts}/10", MessageBoxButton.YesNo, MessageBoxImage.Warning);
+
+        //    if (answer == MessageBoxResult.No)
+        //    {
+        //        e.Cancel = true;
+        //    }
+        //}
     }
 }
 
