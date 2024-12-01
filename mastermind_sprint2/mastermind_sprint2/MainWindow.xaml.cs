@@ -279,15 +279,15 @@ namespace WpfApp
             label3.Background = Brushes.White;
             label4.Background = Brushes.White;
         }
-        //private void MainWindow_Closing(object sender, System.ComponentModel.CancelEventArgs e)
-        //{
-        //    MessageBoxResult answer = MessageBox.Show($"Wilt u het spel vroegtijdig beëindigen?", $"Poging {attempts}/10", MessageBoxButton.YesNo, MessageBoxImage.Warning);
+        private void MainWindow_Closing(object sender, System.ComponentModel.CancelEventArgs e)
+        {
+            MessageBoxResult answer = MessageBox.Show($"Wilt u het spel vroegtijdig beëindigen?", $"Poging {attempts}/10", MessageBoxButton.YesNo, MessageBoxImage.Warning);
 
-        //    if (answer == MessageBoxResult.No)
-        //    {
-        //        e.Cancel = true;
-        //    }
-        //}
+            if (answer == MessageBoxResult.No)
+            {
+                e.Cancel = true;
+            }
+        }
     }
 }
 
